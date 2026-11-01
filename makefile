@@ -1,8 +1,8 @@
 DOAS := $(shell which doas 2>/dev/null || which sudo 2>/dev/null || echo "echo 'No doas/sudo found';")
 
 build:
-	nuitka3 --standalone --onefile pyfetch.py
+	nuitka pyfetch.py -o pyfetch
 
 install:
-	$(DOAS) cp pyfetch.bin /usr/local/bin/pyfetch
+	$(DOAS) cp pyfetch /usr/local/bin/pyfetch
 	$(DOAS) chmod +x /usr/local/bin/pyfetch
