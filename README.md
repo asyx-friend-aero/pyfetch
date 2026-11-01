@@ -12,4 +12,5 @@ cd pyfetch
 compile and install the code
 ```
 make
+make install
 ```
